@@ -195,33 +195,33 @@ ul.cards>li {
 
 ul.cards>li.work {
     background-color: var(--work);
-    background-image: url('/images/icon-work.svg');
+    background-image: url('./images/icon-work.svg');
 }
 
 ul.cards>li.play {
     background-color: var(--play);
-    background-image: url('/images/icon-play.svg');
+    background-image: url('./images/icon-play.svg');
 }
 
 ul.cards>li.study {
     background-color: var(--study);
-    background-image: url('/images/icon-study.svg');
+    background-image: url('./images/icon-study.svg');
 }
 
 ul.cards>li.exercise {
     background-color: var(--excercise);
-    background-image: url('/images/icon-exercise.svg');
+    background-image: url('./images/icon-exercise.svg');
     background-position-y: -5px;
 }
 
 ul.cards>li.social {
     background-color: var(--social);
-    background-image: url('/images/icon-social.svg');
+    background-image: url('./images/icon-social.svg');
 }
 
 ul.cards>li.self-care {
     background-color: var(--self-care);
-    background-image: url('/images/icon-self-care.svg');
+    background-image: url('./images/icon-self-care.svg');
 }
 
 ul.cards>li>.card-content {
