@@ -99,7 +99,7 @@ p {
     width: 100%;
     max-width: 1168px;
     margin: auto;
-    padding: 50px 30px;
+    padding: 81px 24px 51px;
     display: grid;
     gap: 24px;
 }
@@ -121,7 +121,7 @@ header.dashboard-header {
 }
 
 .header-top {
-    padding: 30px;
+    padding: 30px 30px 34px;
     flex-grow: 1;
     background: var(--blue);
     border-radius: inherit;
@@ -153,6 +153,7 @@ header.dashboard-header {
 
 .header-top .title .for {
     display: block;
+    margin-bottom: 4px;
     font-size: 16px;
     font-weight: 300;
 }
@@ -160,7 +161,7 @@ header.dashboard-header {
 .dashboard-header>menu {
     flex-grow: 0;
     margin: 0;
-    padding: 30px;
+    padding: 24px 30px;
     list-style: none;
     display: flex;
     align-items: center;
@@ -170,7 +171,9 @@ header.dashboard-header {
 .dashboard-header>menu a {
     padding: 4px;
     text-decoration: none;
+    text-transform: capitalize;
     color: var(--desaturated-blue);
+    transition: color .3s ease-in-out;
 }
 
 .dashboard-header>menu a:where(:hover, :focus-visible, :active, .active) {
@@ -179,7 +182,7 @@ header.dashboard-header {
 
 /* cards */
 ul.cards>li {
-    padding-top: 36px;
+    padding-top: 40px;
     border-radius: var(--border-radius);
     overflow: hidden;
     background-repeat: no-repeat;
@@ -222,13 +225,19 @@ ul.cards>li.self-care {
 }
 
 ul.cards>li>.card-content {
-    padding: 30px 22px;
-    background: var(--dark-blue);
+    padding: 24px 24px;
+    background-color: var(--dark-blue);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
     display: grid;
     grid-template-columns: auto auto;
     gap: 10px;
     align-items: center;
+    transition: background-color .3s ease-in-out;
+}
+
+ul.cards>li>.card-content:hover:not(:has(.card-options:hover)) {
+    cursor: pointer;
+    background-color: hsl(236, 41%, 34%);
 }
 
 ul.cards>li .card-title {
@@ -242,14 +251,27 @@ ul.cards>li .current {
 }
 
 ul.cards>li .card-options {
-    align-self: start;
     justify-self: end;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    transition: outline .3s ease-in-out;
+}
+
+ul.cards>li .card-options > svg {
+    fill: var(--pale-blue);
+    transition: fill .3s ease-in-out;
+}
+
+ul.cards>li .card-options:where(:hover, :focus-visible, :active) > svg {
+    fill: white
 }
 
 ul.cards>li .previous {
     color: var(--pale-blue);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 300;
+    letter-spacing: -0.02em;
     justify-self: end;
 }
 
@@ -289,16 +311,40 @@ ul.cards>li .previous {
 @media (min-width: 1168px) {
     .dashboard {
         grid-template-columns: 1fr 3fr;
+        gap: 30px;
+    }
+
+    ul.cards {
+        gap: 30px;
+    }
+
+    ul.cards>li {
+        padding-top: 45px;
+    }
+
+    ul.cards>li>.card-content {
+        padding: 30px;
+    }
+
+    ul.cards>li .card-title {
+        margin-bottom: 16px;
     }
 
     .header-top {
         flex-direction: column;
         align-items: flex-start;
+        padding: 34px 32px;
     }
 
     .header-top .avatar {
         margin-right: 0;
         margin-bottom: 40px;
+    }
+
+    .dashboard-header>menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
     }
 
     ul.cards>li .current {
