@@ -301,6 +301,10 @@ ul.cards>li .previous {
         letter-spacing: -0.05em;
     }
 
+    ul.cards>li .card-options {
+        align-self: start;
+    }
+    
     ul.cards>li .previous {
         justify-self: start;
         grid-row: 3 / 4;
@@ -327,7 +331,7 @@ ul.cards>li .previous {
     }
 
     ul.cards>li .card-title {
-        margin-bottom: 16px;
+        margin-bottom: 12px;
     }
 
     .header-top {
